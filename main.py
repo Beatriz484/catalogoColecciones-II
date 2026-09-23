@@ -45,13 +45,15 @@ def main():
                 
         elif opcion == "2":
             print("\n--- Listado de Piezas ---")
-            nombres = list_pieces(catalog)
-            if not nombres:
+            piezas = list_pieces(catalog)
+            if not piezas:
                 print("El catálogo está vacío.")
             else:
-                for idx, nombre in enumerate(nombres, 1):
-                    print(f"{idx}. {nombre}")
-                    
+                for idx, p in enumerate(piezas, 1):
+                    if isinstance(p, dict):
+                        print(f"{idx}. ID: {p.get('id')} | Nombre: {p.get('name')} | Categoría: {p.get('category')} | Precio: {p.get('price')}€ | Estado: {p.get('status')}")
+                    else:
+                        print(f"{idx}. {p}")
         elif opcion == "3":
             print("\n--- Piezas Disponibles ---")
             try:
