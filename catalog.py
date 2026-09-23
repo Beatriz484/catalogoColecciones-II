@@ -29,18 +29,13 @@ def add_piece(piece_id, name, category, price, status, description):
         "status": validated_status,
         "description": validated_desc
     }
-
 def list_pieces(catalog):
-    """Retorna una lista con los nombres de todas las piezas."""
-    try:
-        validate_catalog(catalog)
-    except TypeError:
-        return []
-    
+    """Devuelve la lista completa de piezas del catálogo."""
     if not catalog:
         return []
-        
-    return [piece["name"] for piece in catalog]
+
+    # Devuelve la lista de diccionarios (o puedes cambiarlo si prefieres solo nombres)
+    return catalog
 
 def find_piece_by_id(catalog, piece_id):
     """Busca y retorna el diccionario de la pieza o None si no existe."""
