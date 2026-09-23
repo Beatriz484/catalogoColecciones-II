@@ -1,7 +1,4 @@
 # main.py
-
-# main.py
-
 from catalog import (
     add_piece,
     list_pieces,
