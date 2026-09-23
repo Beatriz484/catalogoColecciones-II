@@ -1,9 +1,11 @@
 # main.py
 
+# main.py
+
 from catalog import (
     add_piece,
     list_pieces,
-    find_piece_by_id,3
+    find_piece_by_id,
     remove_piece,
     filter_by_status,
     get_average_price

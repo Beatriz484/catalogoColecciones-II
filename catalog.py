@@ -13,6 +13,9 @@ def add_piece(piece_id, name, category, price, status, description):
     validate_not_empty(piece_id, "id")
     validate_not_empty(name, "name")
     validate_not_empty(category, "category")
+    validate_not_empty(price, "precio")
+    validate_not_empty(status, "estado")
+    validate_not_empty(description, "descripción")
     
     validated_price = validate_price(price)
     validated_status = validate_status(status)
