@@ -3,7 +3,7 @@
 from catalog import (
     add_piece,
     list_pieces,
-    find_piece_by_id,
+    find_piece_by_id,3
     remove_piece,
     filter_by_status,
     get_average_price
